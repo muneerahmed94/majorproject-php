@@ -8,10 +8,10 @@
 	
 	if(mysqli_query($conn, $sql))
 	{
-		//echo "Inserted!";
+		echo "Inserted!";
 	}
 	else
 	{
-		//echo mysqli_error($conn);
+		echo mysqli_error($conn);
 	}
 ?>
