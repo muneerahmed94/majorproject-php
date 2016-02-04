@@ -1,10 +1,11 @@
 <?php
 	require "init.php";
 	
-	$key = $_POST["key"];
-	$value = $_POST["value"];
+	$name = $_POST["name"];
+	$username = $_POST["userName"];
+	$password = $_POST["password"];
 	
-	$sql = "INSERT INTO Table(Key, Value) VALUES('$key', '$value');";
+	$sql = "INSERT INTO users(Name, Username, Password) VALUES('$name', '$username', '$password');";
 	
 	if(mysqli_query($conn, $sql))
 	{
