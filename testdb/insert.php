@@ -1,10 +1,10 @@
 <?php
 	require "init.php";
 	
-	$key = $_POST["key"];
-	$value = $_POST["value"];
+	$id = $_POST["id"];
+	$name = $_POST["name"];
 	
-	$sql = "INSERT INTO Table(Key, Value) VALUES('$key', '$value');";
+	$sql = "INSERT INTO Students(ID, Name) VALUES('$id', '$name');";
 	
 	if(mysqli_query($conn, $sql))
 	{
