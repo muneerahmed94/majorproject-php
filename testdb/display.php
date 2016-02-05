@@ -1,6 +1,6 @@
 <?php  
 	require "init.php";  
-	$roll_no = $_POST["roll_no"];  
+	$roll_no = $_GET["roll_no"];  
    
 	$sql_query = "SELECT Name FROM Students WHERE ID = '$roll_no';";  
 	$result = mysqli_query($con, $sql_query);  
