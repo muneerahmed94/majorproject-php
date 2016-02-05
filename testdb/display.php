@@ -1,8 +1,7 @@
-<?php  
-	<?php
+ <?php
 	require "init.php";
 	
-	$roll_no = $_POST["roll_no"];
+	$roll_no = "35";
 	
 	$sql = "SELECT Name FROM Students WHERE ID = '$roll_no';";
 	
@@ -19,4 +18,3 @@
 		echo "Not Found!";
 	}
 ?>
- ?>  
