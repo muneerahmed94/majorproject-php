@@ -10,7 +10,7 @@
 	if(mysqli_num_rows($result) > 0)
 	{
 		$sql2 = "DELETE FROM Students WHERE ID = '$roll_no';""
-		mysqli_query($conn, $sql);
+		mysqli_query($conn, $sql2);
 		echo "Deleted Successfully";
 	}
 	else
