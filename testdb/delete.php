@@ -1,7 +1,7 @@
  <?php
 	require "init.php";
 	
-	$roll_no = $_POST["roll_no"];
+	$roll_no = $_GET["roll_no"];
 	
 	$sql = "SELECT Name FROM Students WHERE ID = '$roll_no';";
 	
