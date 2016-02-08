@@ -10,7 +10,7 @@
 	
 	if(mysqli_num_rows($result) > 0)
 	{
-		$sql2 = "Update Table Students SET Name = '$name' WHERE ID = '$roll_no';";
+		$sql2 = "Update Students SET Name = '$name' WHERE ID = '$roll_no';";
 		mysqli_query($conn, $sql2);
 		echo "Updated Successfully";
 	}
