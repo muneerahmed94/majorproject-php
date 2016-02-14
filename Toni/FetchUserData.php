@@ -23,6 +23,6 @@
 	{
 		echo "Not Found!";
 	}
-	
+	echo $user;
 	echo json_encode($user);
 ?>
