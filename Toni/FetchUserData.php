@@ -4,11 +4,10 @@
 	$username = $_GET["username"];
 	$password = $_GET["password"];
 	
-	$sql = "SELECT Name FROM TUsers WHERE username = '$username' AND password = '$password';";
+	$sql = "SELECT * FROM TUsers WHERE username = '$username' AND password = '$password';";
 	
 	$result = mysqli_query($conn, $sql);
 	
-	$user = array();
 	
 	if(mysqli_num_rows($result) > 0)
 	{
