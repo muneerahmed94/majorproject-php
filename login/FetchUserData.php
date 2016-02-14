@@ -4,7 +4,7 @@
 	$email = $_GET["email"];
 	$password = $_GET["password"];
 	
-	$sql = "SELECT * FROM Users WHERE Email = '$username' AND Password = '$password';";
+	$sql = "SELECT * FROM Users WHERE Email = '$email' AND Password = '$password';";
 	
 	$result = mysqli_query($conn, $sql);
 	
