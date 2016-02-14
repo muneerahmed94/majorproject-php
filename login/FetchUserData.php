@@ -19,7 +19,7 @@
 	}
 	else
 	{
-		echo "Not Found!";
+		//echo "Not Found!";
 	}
 	
 	echo json_encode($user);
