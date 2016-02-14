@@ -1,8 +1,8 @@
  <?php
 	require "init.php";
 	
-	$username = $_GET["username"];
-	$password = $_GET["password"];
+	$username = $_POST["username"];
+	$password = $_POST["password"];
 	
 	$sql = "SELECT * FROM TUsers WHERE username = '$username' AND password = '$password';";
 	
@@ -20,7 +20,7 @@
 	}
 	else
 	{
-		echo "Not Found!";
+		//echo "Not Found!";
 	}
 	
 	echo json_encode($user);
