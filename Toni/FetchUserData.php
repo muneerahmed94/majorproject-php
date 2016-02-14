@@ -20,7 +20,7 @@
 		//$user["password"] = $row["password"];
 		//echo $name;
 		echo $row["name"];
-		echo $row["age"];
+		//echo $row["age"];
 	}
 	else
 	{
