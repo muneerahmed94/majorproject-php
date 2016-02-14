@@ -1,8 +1,8 @@
  <?php
 	require "init.php";
 	
-	$username = $_POST["username"];
-	$password = $_POST["password"];
+	$username = $_GET["username"];
+	$password = $_GET["password"];
 	
 	$sql = "SELECT Name FROM TUsers WHERE username = '$username' AND password = '$password';";
 	
