@@ -13,12 +13,14 @@
 	if(mysqli_num_rows($result) > 0)
 	{
 		$row = mysqli_fetch_assoc($result);
-		echo $row;
-		$user["name"] = $row["name"];
-		$user["age"] = $row["age"];
-		$user["username"] = $row["username"];
-		$user["password"] = $row["password"];
+		//echo $row;
+		//$user["name"] = $row["name"];
+		//$user["age"] = $row["age"];
+		//$user["username"] = $row["username"];
+		//$user["password"] = $row["password"];
 		//echo $name;
+		echo $row["name"];
+		echo $row["age"];
 	}
 	else
 	{
