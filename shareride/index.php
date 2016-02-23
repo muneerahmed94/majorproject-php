@@ -11,7 +11,7 @@
 	$noofseats = $_POST["noofseats"];
 	$price = $_POST["price"];
 	
-	$sql = "INSERT INTO Rides(Email, From, To, Date, Time, CarNo, CarName, NoOfSeats, Price) VALUES('$email', '$from', '$to', '$date', '$time', '$carno', '$carname', '$noofseats', '$price');";
+	$sql = "INSERT INTO `majorproject`.`Rides` (`RideID`, `Email`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`) VALUES (NULL, '$email', '$from', '$to', '$date', '$time', '$carno', '$carname', '$noofseats', '$price');";
 	
 	if(mysqli_query($conn, $sql))
 	{
@@ -22,3 +22,4 @@
 		echo mysqli_error($conn);
 	}
 ?>
+
