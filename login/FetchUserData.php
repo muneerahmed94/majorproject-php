@@ -15,6 +15,7 @@
 		$row = mysqli_fetch_assoc($result);
 		$user["name"] = $row["Name"];
 		$user["email"] = $row["Email"];
+		$user["mobile"] = $row["Mobile"];
 		$user["password"] = $row["Password"];
 	}
 	else
