@@ -1,7 +1,7 @@
  <?php
 	require "init.php";
 	
-	$sql = "SELECT * FROM Rides WHERE Date >= CURDATE() && NoOfSeats > 0";
+	$sql = "SELECT * FROM Rides WHERE Date >= CURDATE() AND NoOfSeats > 0";
 	
 	$result = mysqli_query($conn, $sql);
 	
