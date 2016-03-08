@@ -1,7 +1,7 @@
  <?php
 	require "init.php";
 	
-	$RideID = $_GET["RideID"];
+	$RideID = $_POST["RideID"];
 	$DriverName;
 	$DriverEmail;
 	$DriverMobile;
@@ -15,7 +15,7 @@
 	$Price;
 	
 	//update the no of seats in rides table after booking
-	$NoOfSeatsNew = $_GET["NoOfSeatsNew"];
+	$NoOfSeatsNew = $_POST["NoOfSeatsNew"];
 	$sql2 = "Update Rides SET NoOfSeats = '$NoOfSeatsNew' WHERE RideID = '$RideID';";
 	mysqli_query($conn, $sql2);
 	
@@ -24,7 +24,7 @@
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result) > 0)
 	{
-		echo "yes details fetched successfully";
+		//echo "yes details fetched successfully";
 		
 		$row = mysqli_fetch_assoc($result);
 		
@@ -41,18 +41,18 @@
 		$Price = $row["Price"];
 	}
 	
-	$PassengerName = $_GET["PassengerName"];
-	$PassengerEmail = $_GET["PassengerEmail"];
-	$PassengerMobile = $_GET["PassengerMobile"];
-	$NoOfSeatsBooked = $_GET["NoOfSeatsBooked"];
+	$PassengerName = $_POST["PassengerName"];
+	$PassengerEmail = $_POST["PassengerEmail"];
+	$PassengerMobile = $_POST["PassengerMobile"];
+	$NoOfSeatsBooked = $_POST["NoOfSeatsBooked"];
 	
 	$sql3 = "INSERT INTO `majorproject`.`JoinedRides` (`JoinedRideID`, `RideID`, `PassengerName`, `PassengerEmail`, `PassengerMobile`, `NoOfSeatsBooked`, `DriverName`, `DriverEmail`, `DriverMobile`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`) VALUES (NULL, '$RideID', '$PassengerName', '$PassengerEmail', '$PassengerMobile', '$NoOfSeatsBooked', '$DriverName', '$DriverEmail', '$DriverMobile', '$From', '$To', '$Date', '$Time', '$CarNo', '$CarName', '$NoOfSeats', '$Price');";
 	if(mysqli_query($conn, $sql3))
 	{
-		echo "Inserted!";
+		echo "Join Ride Successfull!";
 	}
 	else
 	{
-		echo "unable to insert in JoinedRides";
+		echo "Join Ride unsuccessfull";
 	}
 ?>
