@@ -1,7 +1,7 @@
  <?php
 	require "init.php";
 	
-	$sql = "SELECT * FROM Rides";
+	$sql = "SELECT * FROM Rides WHERE NoOfSeats > 0";
 	
 	$result = mysqli_query($conn, $sql);
 	
