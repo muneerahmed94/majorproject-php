@@ -19,6 +19,8 @@
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result) > 0)
 	{
+		echo "yes details fetched successfully";
+		
 		$row = mysqli_fetch_assoc($result);
 		
 		$DriverName = $row["DriverName"];
