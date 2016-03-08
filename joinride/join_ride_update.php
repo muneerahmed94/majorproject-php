@@ -1,7 +1,7 @@
  <?php
 	require "init.php";
 	
-	$RideID = $_POST["RideID"];
+	$RideID = $_GET["RideID"];
 	$DriverName;
 	$DriverEmail;
 	$DriverMobile;
@@ -11,7 +11,7 @@
 	$Time;
 	$CarNo;
 	$CarName;
-	$NoOfSeatsNew = $_POST["NoOfSeats"];
+	$NoOfSeatsNew = $_GET["NoOfSeats"];
 	$Price;
 	
 	//get details from Rides to store as it is in JoinedRides 
