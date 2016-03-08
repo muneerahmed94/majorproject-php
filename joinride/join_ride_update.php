@@ -44,7 +44,7 @@
 	$PassengerMobile = $_GET["PassengerMobile"];
 	$NoOfSeatsBooked = $_GET["NoOfSeatsBooked"];
 	
-	$sql3 = "INSERT INTO JoinedRides (JoinedRideID, RideID, PassengerName, PassengerEmail, PassengerMobile, NoOfSeatsBooked, DriverName, DriverEmail, DriverMobile, From, To, Date, Time, CarNo, CarName, NoOfSeats, Price) VALUES (NULL, '$RideID', '$PassengerName', '$PassengerEmail', '$PassengerMobile', '$NoOfSeatsBooked', '$DriverName', '$DriverEmail', '$DriverMobile', '$From', '$To', '$Date', '$Time', '$CarNo', '$CarName', '$NoOfSeats', '$Price');";
+	$sql3 = "INSERT INTO `majorproject`.`JoinedRides` (`JoinedRideID`, `RideID`, `PassengerName`, `PassengerEmail`, `PassengerMobile`, `NoOfSeatsBooked`, `DriverName`, `DriverEmail`, `DriverMobile`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`) VALUES (NULL, '$RideID', '$PassengerName', '$PassengerEmail', '$PassengerMobile', '$NoOfSeatsBooked', '$DriverName', '$DriverEmail', '$DriverMobile', '$From', '$To', '$Date', '$Time', '$CarNo', '$CarName', '$NoOfSeats', '$Price');";
 	if(mysqli_query($conn, $sql3))
 	{
 		echo "Inserted!";
