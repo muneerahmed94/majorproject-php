@@ -49,4 +49,8 @@
 	{
 		echo "Inserted!";
 	}
+	else
+	{
+		echo "unable to insert in JoinedRides";
+	}
 ?>
