@@ -37,10 +37,10 @@
 	$sql2 = "Update Rides SET NoOfSeats = '$NoOfSeatsNew' WHERE RideID = '$RideID';";
 	mysqli_query($conn, $sql2);
 	
-	$PassengerName = $_POST["PassengerName"];
-	$PassengerEmail = $_POST["PassengerEmail"];
-	$PassengerMobile = $_POST["PassengerMobile"];
-	$NoOfSeatsBooked = $_POST["NoOfSeatsBooked"];
+	$PassengerName = $_GET["PassengerName"];
+	$PassengerEmail = $_GET["PassengerEmail"];
+	$PassengerMobile = $_GET["PassengerMobile"];
+	$NoOfSeatsBooked = $_GET["NoOfSeatsBooked"];
 	
 	$sql3 = "INSERT INTO `majorproject`.`JoinedRides` (`JoinedRideID`, `RideID`, `PassengerName`, `PassengerEmail`, `PassengerMobile`, `NoOfSeatsBooked`, `DriverName`, `DriverEmail`, `DriverMobile`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`) VALUES (NULL, '$RideID', '$PassengerName', '$PassengerEmail', '$PassengerMobile', '$NoOfSeatsBooked', '$DriverName', '$DriverEmail', '$DriverMobile', '$FROM', '$To', '$Date', '$Time', '$CarNo', '$CarName', '$NoOfSeats', '$Price');"
 ?>
