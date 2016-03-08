@@ -11,8 +11,13 @@
 	$Time;
 	$CarNo;
 	$CarName;
-	$NoOfSeatsNew = $_GET["NoOfSeatsNew"];
+	$NoOfSeats;
 	$Price;
+	
+	//update the no of seats in rides table after booking
+	$NoOfSeatsNew = $_GET["NoOfSeatsNew"];
+	$sql2 = "Update Rides SET NoOfSeats = '$NoOfSeatsNew' WHERE RideID = '$RideID';";
+	mysqli_query($conn, $sql2);
 	
 	//get details from Rides to store as it is in JoinedRides 
 	$sql = "SELECT * FROM Rides WHERE RideID = '$RideID';";
@@ -32,12 +37,9 @@
 		$Time = $row["Time"];
 		$CarNo = $row["CarNo"];
 		$CarName = $row["CarName"];
+		$NoOfSeats = $row["NoOfSeats"];
 		$Price = $row["Price"];
 	}
-	
-	//update the no of seats in rides table after booking
-	$sql2 = "Update Rides SET NoOfSeats = '$NoOfSeatsNew' WHERE RideID = '$RideID';";
-	mysqli_query($conn, $sql2);
 	
 	$PassengerName = $_GET["PassengerName"];
 	$PassengerEmail = $_GET["PassengerEmail"];
