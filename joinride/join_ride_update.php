@@ -11,7 +11,7 @@
 	$Time;
 	$CarNo;
 	$CarName;
-	$NoOfSeatsNew = $_GET["NoOfSeats"];
+	$NoOfSeatsNew = $_GET["NoOfSeatsNew"];
 	$Price;
 	
 	//get details from Rides to store as it is in JoinedRides 
