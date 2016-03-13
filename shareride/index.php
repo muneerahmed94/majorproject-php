@@ -18,10 +18,22 @@
 	if(mysqli_query($conn, $sql))
 	{
 		echo "Ride Shared!";
+		
+		$sql3 = "INSERT INTO `majorproject`.`JoinedRides` (`JoinedRideID`, `RideID`, `PassengerName`, `PassengerEmail`, `PassengerMobile`, `NoOfSeatsBooked`, `DriverName`, `DriverEmail`, `DriverMobile`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`) VALUES (NULL, NULL, '$name', '$email', '$mobile', NULL, '$name', '$email', '$mobile', '$From', '$To', '$Date', '$Time', '$CarNo', '$CarName', '$NoOfSeats', '$Price');";
+		if(mysqli_query($conn, $sql3))
+		{
+			//echo "Join Ride Successfull!";
+		}
+		else
+		{
+			//echo "Join Ride unsuccessfull";
+		}
 	}
 	else
 	{
 		echo mysqli_error($conn);
 	}
+	
+	
 ?>
 
