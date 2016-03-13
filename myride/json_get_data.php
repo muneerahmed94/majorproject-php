@@ -1,7 +1,7 @@
  <?php
 	require "init.php";
 	
-	$email = $_POST["email"];
+	$email = $_GET["email"];
 	
 	$sql = "SELECT * FROM JoinedRides WHERE PassengerEmail = '$email' OR DriverEmail = '$email';";
 	
