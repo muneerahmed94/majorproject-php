@@ -19,7 +19,7 @@
 	{
 		echo "Ride Shared!";
 		
-		$sql2 = "SELECT * FROM Rides WHERE `DriverName` = '$name' AND `DriverEmail` = '$email' AND `DriverMobile` = '$mobile' AND `From` = '$from' AND `To` = '$to' AND `Date` = '$date' AND `Time` = '$time' AND `CarNo` = '$carno' AND `CarName` = '$carname' AND `NoOfSeats` = '$noofseats' AND `Price` = '$price';";
+		$sql2 = "SELECT * FROM Rides WHERE DriverName = '$name' AND DriverEmail = '$email' AND DriverMobile = '$mobile' AND `From` = '$from' AND `To` = '$to' AND Date = '$date' AND Time = '$time' AND CarNo = '$carno' AND CarName = '$carname' AND NoOfSeats = '$noofseats' AND Price = '$price';";
 		$result = mysqli_query($conn, $sql2);
 		$ride_id;
 		if(mysqli_num_rows($result) > 0)
