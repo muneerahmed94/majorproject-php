@@ -3,7 +3,7 @@
 	
 	$email = $_POST["email"];
 	
-	$sql = "SELECT * FROM JoinedRides WHERE PassengerEmail = '$email' OR DriverEmail = '$email';";
+	$sql = "SELECT * FROM JoinedRides WHERE PassengerEmail = '$email' OR DriverEmail = '$email' GROUP BY RideID;";
 	
 	$result = mysqli_query($conn, $sql);
 	
