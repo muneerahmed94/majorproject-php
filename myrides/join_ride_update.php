@@ -46,7 +46,7 @@
 	$PassengerMobile = $_POST["PassengerMobile"];
 	$NoOfSeatsBooked = $_POST["NoOfSeatsBooked"];
 	
-	$sql3 = "INSERT INTO `majorproject`.`JoinedRides` (`JoinedRideID`, `RideID`, `PassengerName`, `PassengerEmail`, `PassengerMobile`, `NoOfSeatsBooked`, `DriverName`, `DriverEmail`, `DriverMobile`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`) VALUES (NULL, '$RideID', '$PassengerName', '$PassengerEmail', '$PassengerMobile', '$NoOfSeatsBooked', '$DriverName', '$DriverEmail', '$DriverMobile', '$From', '$To', '$Date', '$Time', '$CarNo', '$CarName', '$NoOfSeats', '$Price');";
+	$sql3 = "INSERT INTO `majorproject`.`JoinedRides` (`JoinedRideID`, `RideID`, `PassengerName`, `PassengerEmail`, `PassengerMobile`, `NoOfSeatsBooked`, `DriverName`, `DriverEmail`, `DriverMobile`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`, `Status`) VALUES (NULL, '$RideID', '$PassengerName', '$PassengerEmail', '$PassengerMobile', '$NoOfSeatsBooked', '$DriverName', '$DriverEmail', '$DriverMobile', '$From', '$To', '$Date', '$Time', '$CarNo', '$CarName', '$NoOfSeats', '$Price', 'incomplere');";
 	if(mysqli_query($conn, $sql3))
 	{
 		echo "Join Ride Successfull!";
