@@ -32,7 +32,7 @@
 			//echo "Not Found!";
 		}
 		
-		$sql3 = "INSERT INTO `majorproject`.`JoinedRides` (`JoinedRideID`, `RideID`, `PassengerName`, `PassengerEmail`, `PassengerMobile`, `NoOfSeatsBooked`, `DriverName`, `DriverEmail`, `DriverMobile`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`, `Status`) VALUES (NULL, '$ride_id', '$name', '$email', '$mobile', '1', '$name', '$email', '$mobile', '$from', '$to', '$date', '$time', '$carno', '$carname', '$noofseats', '$price', 'Not Done');";
+		$sql3 = "INSERT INTO `majorproject`.`JoinedRides` (`JoinedRideID`, `RideID`, `PassengerName`, `PassengerEmail`, `PassengerMobile`, `NoOfSeatsBooked`, `DriverName`, `DriverEmail`, `DriverMobile`, `From`, `To`, `Date`, `Time`, `CarNo`, `CarName`, `NoOfSeats`, `Price`, `Status`) VALUES (NULL, '$ride_id', '$name', '$email', '$mobile', '1', '$name', '$email', '$mobile', '$from', '$to', '$date', '$time', '$carno', '$carname', '$noofseats', '$price', 'incomplete');";
 		if(mysqli_query($conn, $sql3))
 		{
 			//echo "Join Ride Successfull!";
