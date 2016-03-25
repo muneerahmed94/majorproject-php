@@ -15,7 +15,7 @@
 	}
 	
 	$sql1 = "UPDATE `JoinedRides` SET `Status` = 'complete' WHERE `RideID` = '$RideID';";
-	mysqli_query($conn, $sql);
+	mysqli_query($conn, $sql1);
 	
 	echo json_encode(array("server_response"=>$response));
 	
