@@ -1,7 +1,7 @@
  <?php
 	require "init.php";
 	
-	$RideID = $_GET["RideID"];
+	$RideID = $_POST["RideID"];
 	
 	$sql = "SELECT * FROM `JoinedRides` WHERE `RideID` = '$RideID' AND `DriverEmail` NOT LIKE `PassengerEmail`;";
 	
