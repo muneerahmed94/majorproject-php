@@ -6,7 +6,7 @@
 	$PassengerEmail = $_GET["PassengerEmail"];
 	
 	//update the NoOfSeatsNew (available) in Rides table
-	$sql = "UPDATE `Rides` SET `NoOfSeats` = '$NoOfSeats' WHERE `RideID` = '$RideID';";
+	$sql = "UPDATE `Rides` SET `NoOfSeats` = '$NoOfSeatsNew' WHERE `RideID` = '$RideID';";
 	$result = mysqli_query($conn, $sql);
 	
 	//delete the corresponding ride from the JoinedRides
