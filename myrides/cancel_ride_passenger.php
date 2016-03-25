@@ -1,9 +1,9 @@
  <?php
 	require "init.php";
 	
-	$RideID = $_GET["RideID"];
-	$NoOfSeatsNew = $_GET["NoOfSeatsNew"];
-	$PassengerEmail = $_GET["PassengerEmail"];
+	$RideID = $_POST["RideID"];
+	$NoOfSeatsNew = $_POST["NoOfSeatsNew"];
+	$PassengerEmail = $_POST["PassengerEmail"];
 	
 	//update the NoOfSeatsNew (available) in Rides table
 	$sql = "UPDATE `Rides` SET `NoOfSeats` = '$NoOfSeatsNew' WHERE `RideID` = '$RideID';";
