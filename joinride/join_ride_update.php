@@ -19,6 +19,10 @@
 	$sql2 = "Update Rides SET NoOfSeats = '$NoOfSeatsNew' WHERE RideID = '$RideID';";
 	mysqli_query($conn, $sql2);
 	
+	//update the NoOfSeats in JoinedRides table
+	$sql = "UPDATE `JoinedRides` SET `NoOfSeats` = '$NoOfSeatsNew' WHERE `RideID` = '$RideID';";
+	$result = mysqli_query($conn, $sql);
+	
 	//get details from Rides to store as it is in JoinedRides 
 	$sql = "SELECT * FROM Rides WHERE RideID = '$RideID';";
 	$result = mysqli_query($conn, $sql);
@@ -55,4 +59,6 @@
 	{
 		echo "Join Ride unsuccessfull";
 	}
+	
+	
 ?>
